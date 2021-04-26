@@ -35,9 +35,9 @@ $DarkDesaturatedBlue: hsl(227, 35%, 25%);
 body {
   min-height: 100vh;
   position: relative;
-  // display: grid;
-  // place-items: center;
-  // background: $DarkDesaturatedBlue;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
 
   &::before {
     content: "";
@@ -53,6 +53,7 @@ body {
 .container {
   position: relative;
   padding: 2rem 1.5rem;
+  flex: 1;
 }
 
 .intro {
@@ -194,9 +195,31 @@ body {
   }
 }
 
+.attribution {
+  padding: 0 0.8rem;
+  line-height: 2;
+  font-size: 0.55rem;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+  svg {
+    object-fit: contain;
+    width: 7em;
+    margin-bottom: -0.6em;
+
+    &:hover {
+      fill: $StrongCyan;
+    }
+  }
+}
+
 @media screen and (min-width: 500px) {
   .card {
     font-size: 1.1rem;
+  }
+  .attribution {
+    font-size: 0.7rem;
   }
 }
 @media screen and (min-width: 950px) {
