@@ -12,6 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/range.css" />
 
     <title>Frontend Mentor | Interactive pricing component</title>
 
@@ -30,7 +31,10 @@
     <main class="container">
       <div class="intro">
         <h1>Simple, traffic-based pricing</h1>
-        <p>Sign-up for our 30-day trial. No credit card required.</p>
+        <p>
+          <span>Sign-up for our 30-day trial.</span
+          ><span> No credit card required.</span>
+        </p>
       </div>
 
       <div class="card">
@@ -39,10 +43,14 @@
             <p class="card_views_view">
               <span id="views">100k </span>Pageviews
             </p>
-            <p class="card_views_price"><span id="price">$16.00</span>/month</p>
+            <p class="card_views_price desktop">
+              <span id="price">$16.00</span>/month
+            </p>
           </div>
-          <progress class="card_progress"></progress>
-          <p class="card_price"><span id="price">$16.00</span>/month</p>
+          <div class="card_progress">
+            <input type="range" min="1" max="100" value="50" id="range" />
+          </div>
+          <p class="card_price mobile"><span id="price">$16.00</span>/month</p>
           <div class="card_toggle">
             <p>Monthly Billing</p>
             <div class="card_toggle_toggle">
@@ -72,4 +80,6 @@
     </div> -->
     </main>
   </body>
+
+  <script src="js/range.js"></script>
 </html>
