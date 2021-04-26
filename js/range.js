@@ -69,6 +69,8 @@ const handleInput = (inputElement) => {
   inputElement.addEventListener("mouseup", handleUpAndLeave);
   inputElement.addEventListener("mouseleave", handleUpAndLeave);
   inputElement.addEventListener("click", setCSSProperty);
+  inputElement.addEventListener("change", setCSSProperty);
+  inputElement.addEventListener("input", setCSSProperty);
 
   // Init input
   setCSSProperty();
